@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #8B0000;
+            padding: 50px;
+            background-image: url('https://www.rosatel.pe/chimbote/16340/ramo-amor-con-15-tulipanes-rojos.jpg'); /* Reemplaza con una imagen de tulipanes */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255,255,255,0.5);
+            display: inline-block;
+        }
+        h1 {
+            color: red;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: red;
+            color: white;
+        }
+        .no {
+            background-color: gray;
+            color: white;
+            position: absolute;
+        }
+        .hidden {
+            display: none;
+        }
+        .love-image, .cat-image {
+            margin-top: 20px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.pinimg.com/550x/ce/60/1e/ce601e5bad797cc2aa8be5134b434e34.jpg" alt="Gatito tierno" style="width: 200px; display: block; margin: 0 auto;">
+
+
+        <h1>¿Quieres ser mi enamorada y mi San Valentín? ❤️</h1>
+        <div class="buttons">
+            <button class="yes" onclick="showLoveImage()">Sí</button>
+            <button class="no" onmouseover="moveButton(this)">No</button>
+        </div>
+        <img id="loveImage" class="hidden love-image" src="https://i.pinimg.com/736x/ec/4b/0e/ec4b0e5c5abac80457f56a2c9972019c.jpg" alt="Imagen de amor">
+        <img id="catImage" class="hidden cat-image" src="https://i.pinimg.com/550x/ce/60/1e/ce601e5bad797cc2aa8be5134b434e34.jpg" alt="Gatito tierno">
+    </div>
+    
+    <script>
+        function moveButton(button) {
+            let x = Math.random() * (window.innerWidth - button.clientWidth);
+            let y = Math.random() * (window.innerHeight - button.clientHeight);
+            button.style.left = x + 'px';
+            button.style.top = y + 'px';
+        }
+
+        function showLoveImage() {
+            document.getElementById('loveImage').classList.remove('hidden');
+            document.getElementById('catImage').classList.remove('hidden');
+            alert('¡Sabía que dirías que sí, Te amo mi princesa! ❤️');
+        }
+    </script>
+</body>
+</html>
